@@ -6,7 +6,27 @@
 }
 
 h1 {
-    font-size: 35px;
+    font-size: 45px;
     margin-top: 250px;
     margin-left: auto;
 }
+
+/* Begin button */
+.button {
+    font-size: 40px;
+    margin-left: 0 auto;
+    padding: 3px;
+    width: auto;
+    text-align: center;
+}
+
+
+/* High Score button */
+.hsbutton {
+    font-size: 40px;
+    margin-left: 0 auto;
+    padding: 3px;
+    width: auto;
+    text-align: center;
+}
+

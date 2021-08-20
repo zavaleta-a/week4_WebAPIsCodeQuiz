@@ -5,19 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
+    <script src="script.js"></script>
 
     <title>Web APIs Quiz</title>
 </head>
 <body>
-    <div class="containter"></div>
-    <h1>Coding Quiz</h1>
-        <class="btn">
-            <button>Begin</button>
+    <div id="container" class="home-screen">
+        <h1>Coding Quiz</h1>
+        <div class="buttons">
+            <button id="begin-btn" class="begin-btn btn">Begin</button>
+            <button id="next-btn" class="begin-next btn">Next</button>
         </class>
- <!-- btnhs is the button for the high scores -->   
-        <class="btnhs">
-            <button>High Scores</button>
-        </class>
+        </div>
+
+        <div id="questions">Question</div>
+        <div id="answer-choices" class="btn-grid">
+            <button class="btn">Anwer1</button>
+            <button class="btn">Anwer2</button>
+            <button class="btn">Anwer3</button>
+            <button class="btn">Anwer4</button>
+        </div>
+    </div> 
 
         
 </body>
