@@ -1,4 +1,4 @@
-*{
+:root{
     background-color: black;
     color: white;
     text-align: center;
@@ -12,18 +12,17 @@ h1 {
 }
 
 /* Begin button */
-.button {
-    font-size: 40px;
+.begin-btn {
+    font-size: 20px;
     margin-left: 0 auto;
     padding: 3px;
     width: auto;
     text-align: center;
 }
 
-
-/* High Score button */
-.hsbutton {
-    font-size: 40px;
+/* Next button */
+.next-btn {
+    font-size: 20px;
     margin-left: 0 auto;
     padding: 3px;
     width: auto;
