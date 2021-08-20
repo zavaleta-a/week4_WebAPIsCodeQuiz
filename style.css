@@ -11,21 +11,51 @@ h1 {
     margin-left: auto;
 }
 
+body {
+    padding: 0;
+    margin: auto;
+    display: flex;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
 /* Begin button */
 .begin-btn {
     font-size: 20px;
+    font-weight: bold;
     margin-left: 0 auto;
     padding: 3px;
     width: auto;
     text-align: center;
+    border-radius: 5px;
 }
 
 /* Next button */
 .next-btn {
     font-size: 20px;
+    font-weight: bold;
     margin-left: 0 auto;
     padding: 3px;
     width: auto;
     text-align: center;
+    border-radius: 5px;
 }
 
+#questions {
+    display: ;
+    color: black;
+}
+
+#answer-choices {
+    display: ;
+}
+
+#qa-container {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color:whitesmoke;
+
+}
