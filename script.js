@@ -4,8 +4,8 @@ beginButton.addEventListener('click',startQuiz)
 
 function startQuiz() {
     console.log('begin quiz');
-    beginButton.classList.add('hide')
-    
+    beginButton.classList.add('hidden')
+    questionContainer.classList.remove('hidden')
 
 }
 
