@@ -43,12 +43,12 @@ body {
 }
 
 #questions {
-    display: none;
+   /* Add display none in order to hide questions at home screen */
     color: black;
 }
 
 #answer-choices {
-    display: none;
+    /* Add display none in order to hide anwers at home screen */
 }
 
 #qa-container {
@@ -62,4 +62,11 @@ body {
 
 .hide {
     display: none;
+}
+
+.btn-choices {
+    display: grid;
+    padding: 15px;
+    gap: 5px;
+
 }
