@@ -5,6 +5,17 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Timer */
+p {
+    
+    width: auto;
+    height: 100px;
+    font-size: large;
+    justify-content: right;
+    position: relative;
+    left: 350px;
+}
+
 h1 {
     font-size: 45px;
     margin-top: 250px;
@@ -42,6 +53,18 @@ body {
     border-radius: 5px;
 }
 
+/* High Score button */
+
+.hscore-btn {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 0 auto;
+    padding: 3px;
+    width: auto;
+    text-align: center;
+    border-radius: 5px;
+}
+
 #questions {
    /* Add display none in order to hide questions at home screen */
     color: black;
@@ -57,6 +80,7 @@ body {
     border-radius: 10px;
     padding: 10px;
     background-color:whitesmoke;
+    color: black;
     
 
 }

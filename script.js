@@ -1,6 +1,7 @@
 // Keep all variables together for organization
 var beginButton = document.getElementById('begin-btn');
 var nextButton = document.getElementById('next-btn');
+var highscoreButton = document.getElementById('highscore-btn');
 
 var questionContainer = document.getElementById('qa-container')
 
@@ -12,17 +13,20 @@ let randomQuestion, currentQuestion
 
 //Event listener to begin the quiz
 beginButton.addEventListener('click',startQuiz)
+beginButton.addEventListener('click', startTimer)
+
 // Event listener for next button
 nextButton.addEventListener('click',() => {
     currentQuestion++
     showNextQuestion()
 })
-
+// Begin Quiz
 function startQuiz() {
     console.log('begin quiz');
     beginButton.classList.add('hidden')
+    highscoreButton.classList.add('hidden')
     questionContainer.classList.remove('hidden')
-    randomQuestion = questions.sort(() => Math.random())
+    randomQuestion = questions.sort(() => Math.random() -.3)
     currentQuestion = 0
     showNextQuestion()
 }
@@ -91,17 +95,95 @@ function clearStatusClass (element) {
 }
 var questions = [
     {
-        question: 'Question 1?', 
+        question: 'What does CDN stand for?', 
+        answers: [
+            {text: 'Content Data Nest', correct: false},
+            
+            {text: 'Content Delivery Network', correct: true},
+
+            {text: 'Certified Debugging Node', correct: false},
+
+            {text: 'Cascading Data Network', correct: false},
+               
+            
+        ]
+    },
+    {
+        question: 'Which is the correct way to camel case?', 
+        answers: [
+            {text: 'camelCase', correct: true},
+
+            {text: 'caMelCaSe', correct: false},
+
+            {text: 'CamelCase', correct: false},
+
+            {text: 'cameLCase', correct: false},
+            
+        ]
+    },
+
+    {
+        question: 'Question 3?', 
         answers: [
             {text: 'correct', correct: true},
 
             {text: 'not correct', correct: false},
-                console.log('wrong')
+            
+        ]
+    },
+
+    {
+        question: 'Question 4?', 
+        answers: [
+            {text: 'correct', correct: true},
+
+            {text: 'not correct', correct: false},
+            
+        ]
+    },
+
+    {
+        question: 'Question 5?', 
+        answers: [
+            {text: 'correct', correct: true},
+
+            {text: 'not correct', correct: false},
             
         ]
     }
 
 ]
 
-// Need to make sure questions are radomized for each play through
+
+//Timer
+
+var startingTime = 1;
+let time = startingTime * 10;
+
+var timerEl = document.getElementById('timer');
+
+
+
+function startTimer(){
+    var counter = time;
+    setInterval(function() {
+      counter--;
+      if (startingTime >= 0) {
+        span = document.getElementById('timer');
+        span.innerHTML = counter;
+      }
+      if (counter === 0) {
+          alert('Out of time');
+          clearInterval(counter);
+      }
+    }, 1000);
+  }
+ 
+  
+
+
+
+
+// High Score
+
 
