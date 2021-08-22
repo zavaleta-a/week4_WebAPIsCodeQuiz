@@ -24,7 +24,6 @@ nextButton.addEventListener('click',() => {
 function startQuiz() {
     console.log('begin quiz');
     beginButton.classList.add('hidden')
-    highscoreButton.classList.add('hidden')
     questionContainer.classList.remove('hidden')
     randomQuestion = questions.sort(() => Math.random() -.3)
     currentQuestion = 0
@@ -123,42 +122,38 @@ var questions = [
     },
 
     {
-        question: 'Question 3?', 
+        question: 'True or Flase. Any number, positive or nagative, is truthy.', 
         answers: [
-            {text: 'correct', correct: true},
+            {text: 'True', correct: true},
 
-            {text: 'not correct', correct: false},
+            {text: 'False', correct: false},
             
         ]
     },
 
     {
-        question: 'Question 4?', 
+        question: 'What does HTML stand for?', 
         answers: [
-            {text: 'correct', correct: true},
+            
+            {text: 'Hyper Text Management Language', correct: false},
+            
+            {text: 'Hyper Tech Module Links', correct: false},
 
-            {text: 'not correct', correct: false},
+            {text: 'Hypertext Markup Language', correct: true},
+
+            {text: 'Hyper Text Markup Levers', correct: false},
             
         ]
     },
 
-    {
-        question: 'Question 5?', 
-        answers: [
-            {text: 'correct', correct: true},
-
-            {text: 'not correct', correct: false},
-            
-        ]
-    }
-
+    
 ]
 
 
 //Timer
 
-var startingTime = 1;
-let time = startingTime * 10;
+var startingTime = 2;
+let time = startingTime * 60;
 
 var timerEl = document.getElementById('timer');
 
@@ -184,6 +179,6 @@ function startTimer(){
 
 
 
-// High Score
+
 
 

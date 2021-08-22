@@ -53,17 +53,6 @@ body {
     border-radius: 5px;
 }
 
-/* High Score button */
-
-.hscore-btn {
-    font-size: 20px;
-    font-weight: bold;
-    margin-left: 0 auto;
-    padding: 3px;
-    width: auto;
-    text-align: center;
-    border-radius: 5px;
-}
 
 #questions {
    /* Add display none in order to hide questions at home screen */
