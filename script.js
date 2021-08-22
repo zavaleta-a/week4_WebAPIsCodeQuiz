@@ -10,8 +10,13 @@ var answerBtnsEl = document.getElementById('answer-choices')
 
 let randomQuestion, currentQuestion
 
-//Event listeners
+//Event listener to begin the quiz
 beginButton.addEventListener('click',startQuiz)
+// Event listener for next button
+nextButton.addEventListener('click',() => {
+    currentQuestion++
+    showNextQuestion()
+})
 
 function startQuiz() {
     console.log('begin quiz');
