@@ -1,5 +1,16 @@
+// Keep all variables together for organization
 var beginButton = document.getElementById('begin-btn');
+var nextButton = document.getElementById('next-btn');
 
+var questionContainer = document.getElementById('qa-container')
+
+var questionEl = document.getElementById('question')
+
+var answerBtnsEl = document.getElementById('answer-choices')
+
+let randomQuestion, currentQuestion
+
+//Event listeners
 beginButton.addEventListener('click',startQuiz)
 
 function startQuiz() {
@@ -11,26 +22,70 @@ function startQuiz() {
     showNextQuestion()
 }
 
-var questionContainer = document.getElementById('qa-container')
+
 
 function showNextQuestion() {
     console.log('next question')
-    beginButton
+    resetState()
+    showQuestion(randomQuestion[currentQuestion])
+    
 
 }
 
-function selectAnswer() {
+function resetState() {
+    nextButton.classList.add('hidden')
+    while (answerBtnsEl.firstChild) {
+        answerBtnsEl.removeChild(answerBtnsEl.firstChild)
+    }
 
 }
 
+
+function showQuestion(question){
+    questionEl.innerText = question.question
+    question.answers.forEach(answer => {
+        const button = document.createElement('button')
+        button.innerText = answer.text
+        button.classList.add('btn')
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener('click', selectAnswer)
+        answerBtnsEl.appendChild(button)
+    })
+}
+
+function selectAnswer(x) {
+    var selectBtn = x.target
+    var correct = selectBtn.dataset.correct
+    setStatusClass(document.body, correct)
+    Array.from(answerBtnsEl.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+    })
+    nextButton.classList.remove('hidden')
+}
+
+function setStatusClass(element, correct){
+    clearStatusClass(element)
+    if (correct) {
+        element.classList.add('correct')
+    } else {
+        element.classList.add('wrong')
+    }
+}
+
+function clearStatusClass (element) {
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
+}
 var questions = [
     {
-        question: 'Question 1?',
+        question: 'Question 1?', 
         answers: [
             {text: 'correct', correct: true},
+
             {text: 'not correct', correct: false},
-            {text: 'not correct 2', correct: false},
-            {text: 'not correct 3', correct: false},
+                console.log('wrong')
             
         ]
     }
@@ -39,4 +94,3 @@ var questions = [
 
 // Need to make sure questions are radomized for each play through
 
-var randomQuestion, currentQuestions
