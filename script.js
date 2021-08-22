@@ -1,7 +1,7 @@
 // Keep all variables together for organization
 var beginButton = document.getElementById('begin-btn');
 var nextButton = document.getElementById('next-btn');
-var highscoreButton = document.getElementById('highscore-btn');
+
 
 var questionContainer = document.getElementById('qa-container')
 
@@ -152,7 +152,7 @@ var questions = [
 
 //Timer
 
-var startingTime = 2;
+var startingTime = 1;
 let time = startingTime * 60;
 
 var timerEl = document.getElementById('timer');
